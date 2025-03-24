@@ -28,7 +28,7 @@ Ce projet vise à extraire des informations sémantiques à partir d’images en
 
 ## Prérequis
 
-- **Python 3.7+**
+- **Python**
 - Les bibliothèques Python suivantes :
   - `ultralytics` (pour YOLO)
   - `requests`
