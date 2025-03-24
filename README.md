@@ -24,8 +24,6 @@ Ce projet combine la détection d’objets via YOLO avec l’extraction et la re
 
 Ce projet vise à extraire des informations sémantiques à partir d’images en détectant les objets présents avec un modèle YOLO. Les classes d’objets détectées sont ensuite utilisées pour interroger ConceptNet afin d’obtenir des relations entre ces concepts. Les données récupérées sont transformées en triplets RDF et stockées dans un serveur Apache Jena Fuseki. Un graphe de connaissances est construit et visualisé à l’aide de NetworkX et matplotlib dans une application Streamlit.
 
-L’approche s’inspire d’un projet similaire réalisé par un collègue (rapport PDF fourni), mais avec l’utilisation d’Apache Jena Fuseki 5.2.0 à la place de GraphDB.
-
 ---
 
 ## Prérequis
@@ -101,9 +99,6 @@ Chaque étape du traitement est loguée avec différents niveaux (info, debug, w
 
 Ce fichier implémente l’interface utilisateur avec Streamlit. Ses fonctionnalités incluent :
 
-- **Interface graphique :**  
-  Une page d’accueil personnalisée avec un fond (image de `images/background.jpg`), un titre et une description animée.
-
 - **Options de traitement :**  
   Possibilité d’uploader une image ou d’utiliser la webcam. Plusieurs options de configuration sont proposées dans la sidebar (algorithme de détection, seuil de confiance, personnalisation du graphe).
 
@@ -154,7 +149,6 @@ Ce fichier implémente l’interface utilisateur avec Streamlit. Ses fonctionnal
 - **Visualisation des Graphes :**  
   Le graphe des connaissances est construit à partir des résultats d’une requête SPARQL exécutée sur Fuseki. NetworkX et matplotlib sont utilisés pour la représentation graphique, tandis que Streamlit offre une interface utilisateur moderne et interactive.
 
-Ce projet s’inscrit dans le cadre de travaux similaires présentés dans le rapport PDF fourni, avec une adaptation pour utiliser Apache Jena Fuseki au lieu de GraphDB. Cette approche permet de bénéficier de la puissance et de la flexibilité d’un triplestore open source pour la gestion des connaissances sémantiques.
 
 ---
 
@@ -163,4 +157,3 @@ Ce projet s’inscrit dans le cadre de travaux similaires présentés dans le ra
 - **Apache Jena Fuseki :** [Documentation Fuseki](https://jena.apache.org/documentation/fuseki2/)
 - **ConceptNet :** [ConceptNet API](https://conceptnet.io/)
 - **YOLO (You Only Look Once) :** [Ultralytics YOLO](https://github.com/ultralytics/ultralytics)
-- **Rapport de projet de référence :** (voir le fichier PDF fourni pour un contexte et une analyse détaillée du système)
